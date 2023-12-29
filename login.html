@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>S R H Hospital</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <style>
+    table, th, td{
+      border: 5px solid black ;
+      border-collapse: collapse;
+    }
+    .paddTable
+    {
+      padding: 100px 500px; 
+      cursor:text;
+    }
+  </style>
+</head>
+<body>
+  <nav class="zone blue sticky">
+    <ul class="main-nav">
+      <li><a href="doctors.html">Doctors</a></li>
+      <li><a href="stocks.html">Stocks</a></li>
+      <li><a href="patient_log.html">Patients</a></li>
+      <li style="padding-left: 250px"><div class="Heading"><a href="index.html">S R H HOSPITAL</a></div></li>
+      <li class="push"><a href="contact.html">ContactUs</a></li>
+    </ul>
+  </nav>
+
+
+  <script type="text/javascript">
+    function login() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Check if the password meets the requirements
+      if (password.length < 8) {
+        alert("Password must contain at least 8 characters.");
+        return;
+      }
+
+      // Check if the credentials are valid (replace with your own logic)
+      if (username === "admin" && password === "password@123") {
+        goToPage3();
+      } else {
+        alert("Invalid credentials. Please try again.");
+      }
+    }
+
+    function goToPage3() {
+      window.location.href = "index.html";
+    }
+  </script>
+
+  <div class="container zone yellow">
+    <center>
+      <h3>Login</h3>
+      <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <button type="button" id="redirect" style="
+      background-color: #4CAF50; 
+      border-radius: 15px;
+      color: white;
+      padding: 15px 32px;
+      margin-top: 30px 30px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;" onclick="login()"><strong> LOGIN </strong></button>
+      </form>
+    </center>
+  </div>
+    <footer class="zone blue">S R H Hospital<br>
+    <div class="address">Street:  340, J.s. Seth Road, Opp Bank Of Maharashtra, Chira Bazar<br>
+    City: Mumbai &nbsp;&nbsp; Zip code: 400002<br>
+    Phone number:  0222-2060411<br>
+  </div>
+  </footer>
+</body>
+</html>
